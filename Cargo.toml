@@ -1,0 +1,33 @@
+[package]
+name = "wgslx"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["dylib"]
+
+[workspace]
+members = [
+  "crates/wgslx-wgpu/naga",
+  "crates/wgslx-lsp",
+  "crates/wgslx-cli",
+  "crates/wgslx-bindgen",
+  "crates/wgslx-internal",
+  "tests",
+  "xtask",
+]
+default-members = [
+  "crates/wgslx-wgpu/naga",
+  "crates/wgslx-lsp",
+  "crates/wgslx-cli",
+  "crates/wgslx-bindgen",
+  "crates/wgslx-internal",
+  "tests",
+  "xtask",
+]
+
+[workspace.dependencies.naga]
+path = "crates/wgslx-wgpu/naga"
+
+[dependencies]
+internal = { package = "wgslx-internal", path = "crates/wgslx-internal" }

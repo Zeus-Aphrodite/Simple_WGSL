@@ -1,0 +1,3 @@
+[submodule "crates/wgslx-wgpu"]
+	path = crates/wgslx-wgpu
+	url = git@github.com:mmgeorge/wgslx-wgpu.git
